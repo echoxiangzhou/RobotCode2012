@@ -9,10 +9,11 @@ class Display {
 	~Display();
 	void Printf(const char *format, ...);
 	void PrintfLine(int line, const char *format, ...);
+	void Update();
 	
 	private:
 	DriverStationLCD *dstation;
-	list <string> lines[6];
+	string lines[6];
 };
 
 #endif
