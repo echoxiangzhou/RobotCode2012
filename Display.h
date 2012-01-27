@@ -10,6 +10,7 @@ class Display {
 	void Printf(const char *format, ...);
 	void PrintfLine(int line, const char *format, ...);
 	void Update();
+	void Clear();
 	
 	private:
 	DriverStationLCD *dstation;
