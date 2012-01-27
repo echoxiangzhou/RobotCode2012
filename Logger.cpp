@@ -1,3 +1,4 @@
+#include <cstdarg>
 #include <cstdio>
 
 #include "Logger.h"
