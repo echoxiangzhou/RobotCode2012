@@ -38,3 +38,13 @@ void Display::Update() {
 	dstation->PrintfLine(DriverStationLCD::kUser_Line6, lines[5].c_str());
 	dstation->UpdateLCD();
 }
+
+void Display::Clear() {
+	dstation->PrintfLine(DriverStationLCD::kUser_Line1, "");
+	dstation->PrintfLine(DriverStationLCD::kUser_Line2, "");
+	dstation->PrintfLine(DriverStationLCD::kUser_Line3, "");
+	dstation->PrintfLine(DriverStationLCD::kUser_Line4, "");
+	dstation->PrintfLine(DriverStationLCD::kUser_Line5, "");
+	dstation->PrintfLine(DriverStationLCD::kUser_Line6, "");
+	dstation->UpdateLCD();
+}
