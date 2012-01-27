@@ -4,7 +4,7 @@
 
 DriveTrain::DriveTrain()
 {
-	Singleton<Logger>::GetInstance.Logf("DriveTrain() initializing.");
+	Singleton<Logger>::GetInstance().Logf("DriveTrain() initializing.");
 }
 
 DriveTrain::~DriveTrain()
