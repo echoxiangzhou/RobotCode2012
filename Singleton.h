@@ -24,8 +24,8 @@ public:
 	}
 	
 private:
-	Singleton();
-	~Singleton();
+	Singleton() { }
+	~Singleton() { }
 	
 	static T* instance;
 };

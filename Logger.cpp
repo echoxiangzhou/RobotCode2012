@@ -2,6 +2,7 @@
 
 #include "Logger.h"
 
+using std::endl;
 using std::string;
 
 Logger::Logger(const string& fileName)
@@ -21,5 +22,5 @@ void Logger::Logf(const char* format, ...)
 	char buffer[256];
 	vsprintf(buffer, 255, format, args);
 	va_end(args);
-	this->file << buffer;
+	this->file << buffer << endl;
 }
