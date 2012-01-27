@@ -13,7 +13,8 @@ Gyroscope::~Gyroscope()
 	Singleton<Logger>::GetInstance().Logf("Shutting down Gyro...");
 }
 
-double Gyro::GetOrientation()
+double Gyroscope::GetOrientation()
 {
+	return gyro.GetAngle();
 }
 
