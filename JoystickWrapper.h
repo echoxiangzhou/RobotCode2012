@@ -80,6 +80,7 @@ public:
 	float GetRotation() const;
 	float GetRawRotation() const;
 	float GetThrottle() const;
+	StickType GetType() const { return this->type; }
 	void SetSnapPoints(int snapPoints) {this->snapPoints = snapPoints;}
 	
 private:

@@ -24,6 +24,7 @@ DriveTrain::~DriveTrain()
 
 void DriveTrain::DriveArcade(double x, double y)
 {
+#if 0
 	//left->Set(-(y-x));
 	//right->Set(y+x);
 	/*
@@ -91,6 +92,9 @@ void DriveTrain::DriveArcade(double x, double y)
 		right->Set(y+x);
 	}
 }
+#else
+	
+#endif
 }
 
 void DriveTrain::DriveTank(double left, double right)

@@ -31,4 +31,20 @@ double radToDeg(double radians)
 	return radians * 180.0 / PI;
 }
 
+/**
+ * Rotate a coordinate by an angle.
+ * 
+ * \param x the x coordinate.
+ * \param y the y coordinate.
+ * \param angle the angle to rotate the coordinate by (in degrees).
+ * \param rx the rotated x coordinate.
+ * \param ry the rotated y coordinate.
+ */
+void rotate(double x, double y, double angle, double* rx, double* ry)
+{
+	angle = degToRad(angle);
+	*rx = x * std::cos(angle) - y * std::sin(angle);
+	*ry = x * std::sin(angle) + y * std::cos(angle);
+}
+
 #endif // MATH_H
