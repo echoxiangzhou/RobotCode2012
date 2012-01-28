@@ -17,6 +17,7 @@ Robot::~Robot()
 	Singleton<Logger>::GetInstance().Logf("Shutting down the Robot class.");
 	
 	//Destroy instances of singletons that we have used
+	Singleton<Display>::DestroyInstance();
 	Singleton<DriveTrain>::DestroyInstance();
 	Singleton<Logger>::DestroyInstance();
 }
