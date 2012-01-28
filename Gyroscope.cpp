@@ -18,3 +18,8 @@ double Gyroscope::GetOrientation()
 	return gyro.GetAngle();
 }
 
+void Gyroscope::Reset()
+{
+	gyro.Reset();
+}
+

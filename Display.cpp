@@ -2,6 +2,8 @@
 #include <cstdarg>
 #include "Display.h"
 
+using std::string;
+
 Display::Display {
 	dstation = DriverStationLCD::GetInstance();
 }
@@ -20,7 +22,8 @@ void Display::Printf(const char *format, ...) {
 }
 
 void Display::PrintfLine(int line, const char *format, ...) {
-	if (line < 0 || line > 5) return;
+	if (line < 0 || line > 5)
+		return;
 	va_list args;
 	va_start(args, format);
 	char buf[256];

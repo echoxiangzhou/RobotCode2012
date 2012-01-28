@@ -1,3 +1,5 @@
+#include <WPILib.h>
+
 #include "DriveTrain.h"
 #include "Logger.h"
 #include "Singleton.h"
@@ -7,11 +9,17 @@ int round(float d, int pos = 1);
 DriveTrain::DriveTrain()
 {
 	Singleton<Logger>::GetInstance().Logf("DriveTrain() initializing.");
+
+	this->left = new Jaguar(1, 1);
+	this->right = new Jaguar(1, 2);
 }
 
 DriveTrain::~DriveTrain()
 {
 	Singleton<Logger>::GetInstance().Logf("~DriveTrain() stopping.");
+	
+	delete this->left;
+	delete this->right;
 }
 
 void DriveTrain::DriveArcade(double x, double y)
