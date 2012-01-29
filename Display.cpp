@@ -4,11 +4,11 @@
 
 using std::string;
 
-Display::Display {
+Display::Display() {
 	dstation = DriverStationLCD::GetInstance();
 }
 
-Display::~Display {
+Display::~Display() {
 	
 }
 

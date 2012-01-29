@@ -91,7 +91,7 @@ void JoystickWrapper::GetAxis(float* xaxis, float* yaxis) const
 	float angle = GetAngle();
 	
 	//Calculate the angle that we will snap to:
-	angle = floor(angle/(360/snapPoints))*(360/snapPoints) * M_PI / 180;
+	angle = floor(angle/(360/snapPoints))*(360/snapPoints) * PI / 180;
 
 	//Snap the magnitude to an exponential filter
 	float magnitude = this->joystick->GetMagnitude();

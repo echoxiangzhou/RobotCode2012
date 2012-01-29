@@ -15,10 +15,6 @@ public:
 	 * 
 	 * \note this only works for classes that have constructors without parameters.
 	 */
-	static void CreateInstance()
-	{
-		instance = new T();
-	}
 	
 	/**
 	 * Destroy the encapsulated instance of the class.
@@ -34,10 +30,7 @@ public:
 	 * \return the encapsulated instance of the class.
 	 */
 	static T& GetInstance()
-	{
-		if( !instance )
-			CreateInstance();
-		
+	{	
 		return *instance;
 	}
 	

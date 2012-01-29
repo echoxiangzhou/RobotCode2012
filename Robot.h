@@ -2,6 +2,7 @@
 #define ROBOT_H
 
 #include <WPILib.h>
+#define GET_FUNC(x) &Robot::x
 
 /**
  * Our main robot class.
@@ -28,6 +29,11 @@ public:
 	 * Method for teleop mode.
 	 */
 	void OperatorControl();
+	
+private:
+	void testCallbackUp();
+	void testCallbackDown();
+	void testCallbackHeld();
 };
 
 #endif // ROBOT_H

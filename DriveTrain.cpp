@@ -4,14 +4,15 @@
 #include "Logger.h"
 #include "Singleton.h"
 
-int round(float d, int pos = 1);
-
 DriveTrain::DriveTrain()
 {
 	Singleton<Logger>::GetInstance().Logf("DriveTrain() initializing.");
 
 	this->left = new Jaguar(1, 1);
 	this->right = new Jaguar(1, 2);
+	
+	this->left->SetSafetyEnabled(false);
+	this->right->SetSafetyEnabled(false);
 }
 
 DriveTrain::~DriveTrain()
@@ -97,13 +98,8 @@ void DriveTrain::DriveArcade(double x, double y)
 #endif
 }
 
-void DriveTrain::DriveTank(double left, double right)
+void DriveTrain::DriveTank(double __left, double __right)
 {
-	left->Set(left);
-    right->Set(right);
-}
-
-int round(float d, int pos = 1) {
-	if (d - floor(d) >= .5) return ceil(d);
-	return floor(d);
+	left->Set(__left);
+    right->Set(__right);
 }
